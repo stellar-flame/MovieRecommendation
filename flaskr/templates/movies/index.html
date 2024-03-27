@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  {% for rating in ratings %}
+    <article class="rating">
+      <header>
+        <div>
+          <h1>{{ rating['title'] }}</h1>
+          <div class="about"> {{ rating['rating'] }}</div>
+        </div>
+      </header>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
