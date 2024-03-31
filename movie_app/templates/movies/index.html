@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Recommended For You</h1>
+<div class="grid-container">
+<div class="recommendation-grid">
+  <div class="grid-heading">Titles</div>
+  {% for recommendation in recommendations %}
+    <div class="grid-item">{{ recommendation['title'] }}</div>
+  {% endfor %}
+</div>
+
+</div>
+<hr>
+<h1>Ratings</h1>
+<div class="rating-grid">
+  <div class="grid-heading">Titles</div>
+  <div class="grid-heading">Rating</div>
+  {% for rating in ratings %}
+    <div class="grid-item">{{ rating['title'] }}</div>
+    <div class="grid-item">{{ rating['rating'] }}</div>
+  {% endfor %}
+</div>
+{% endblock %}
