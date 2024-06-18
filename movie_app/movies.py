@@ -6,6 +6,7 @@ from flask import (
     Blueprint, render_template
 )
 
+
 bp = Blueprint('movies', __name__)
 recommender = MovieRecommender(os.path.join(bp.root_path, '../data', 'ratings.csv'),
                                os.path.join(bp.root_path, '../data', 'movies.csv'))
